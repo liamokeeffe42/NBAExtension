@@ -1,17 +1,17 @@
-// "use strict";
-// (function() {
+"use strict";
+(function() {
 
   var num = 0;
+  var myKey = config.API_KEY;
   // function getScores() {
     fetch("https://api-nba-v1.p.rapidapi.com/games/live/", {
     	"method": "GET",
     	"headers": {
     		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
-    		"x-rapidapi-key": "72d1359524msha5302496d4423eep1cc3a5jsnf2fd1553bf33"
+    		"x-rapidapi-key": myKey
       }
     })
     .then(response => {
-      // test();
       createGames(response);
     })
     .catch(err => {
@@ -23,14 +23,10 @@
       let scoreModule = document.createElement("DIV");
       scoreModule.id = "scoreModule" + num.toString();
       let score = document.createElement("SPAN");
-      let arenaName = document.createElement("SPAN");
       score.innerHTML = awayScore + " - " + homeScore;
-      arenaName.innerHTML = arena;
       score.classList.add("score");
-      arenaName.classList.add("arena");
       getTime(id, num);
       scoreModule.appendChild(score);
-      // scoreModule.appendChild(arenaName);
       scoreModule.classList.add("scoreModule");
       return scoreModule;
   }
@@ -75,7 +71,7 @@
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
-        "x-rapidapi-key": "72d1359524msha5302496d4423eep1cc3a5jsnf2fd1553bf33"
+        "x-rapidapi-key": myKey
       }
     })
       .then(response => {
@@ -103,7 +99,7 @@
     	"method": "GET",
     	"headers": {
     		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
-    		"x-rapidapi-key": "72d1359524msha5302496d4423eep1cc3a5jsnf2fd1553bf33"
+    		"x-rapidapi-key": myKey
       }
     })
     .then(response => {
@@ -143,19 +139,4 @@
     });
   }
 
-  // function test() {
-  //   let game = document.createElement("div");
-  //   let teamA = getLogo("1", "left");
-  //   alert(typeof teamA);
-  //   var teamH = getLogo("8", "right");
-  //   let score = getScores(44, 65,
-  //                         "Staples Center");
-  //   game.classList.add("liveGame");
-  //   game.append(teamA);
-  //   game.append(teamH);
-  //   game.append(score);
-  //   increaseSize(250);
-  //   $("nbaScores").appendChild(game);
-  // }
-
-// })();
+})();
