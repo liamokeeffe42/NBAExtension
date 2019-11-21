@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rokkitt&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
+
+#page-main {
+  width:200px;
+  height:0px;
+  background-image: url(greybackground.jpg);
+}
+
+#title {
+  font-family: SF Sports Night NS Upright;
+  color: rgb(214, 30, 38);
+  font-size: 15pt;
+  text-align: center;
+}
+
+.noLiveGames {
+  font-family: SF Sports Night NS Upright;
+  color: white;
+  font-size: 10pt;
+}
+
+.noGamesBox {
+  text-align: center;
+}
+
+.liveGame {
+  overflow: hidden;
+}
+
+.logo {
+  height: 35px;
+  width: 35px;
+}
+
+.score {
+  font-size: 15pt;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.scoreModule {
+  width: 50%;
+}
+
+/* .arena, .time {
+  color: white;
+  display: block;
+  text-align: center;
+  margin-top: 1px;
+} */
+
+/* .arena {
+  font-size: 6pt;
+  font-family: 'Rokkitt', serif;
+  float: bottom;
+} */
+
+.time {
+  font-size: 8pt;
+  font-family: 'Archivo Black', sans-serif;
+  color: white;
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.leftTeam {
+  width: 25%;
+  float: left;
+}
+
+.leftTeam, .rightTeam, .scoreModule {
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  text-align: center;
+}
+
+.leftTeam, .rightTeam {
+  font-family: 'Barlow', sans-serif;
+  font-weight:  bold;
+}
+
+.rightTeam {
+  width: 25%;
+  float: right;
+}
+
+.teamName {
+  color: white;
+  font-size: 6pt;
+  display: block;
+  text-align: center;
+}
+
+.liveGame:before {
+  content:' ';
+  display:block;
+  border:1px solid white;
+  margin-bottom: 1.2px;
+}

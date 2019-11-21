@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "NBA Plugin",
+  "description": "This extension will give a user the scores & times of the current live NBA games.",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "NBA.html",
+   "default_title": "Inject!"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+   "activeTab"
+   ]
+}
